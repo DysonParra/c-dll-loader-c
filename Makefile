@@ -143,8 +143,10 @@ appR:
 # Make all the targets.
 all:
 	make clean
-	make dLib
-	make app
+	make stdcall$(objectFormat)$(dLibMakeFormat)DllMain
+	make cdecl$(objectFormat)$(dLibMakeFormat)
+	gcc -Wall -shared -o std_cdecl_lib$(dLibFormat) $(objectsDir)/stdcall.o $(objectsDir)/cdecl.o -Wl,--add-stdcall-alias
+	$(CC) $(CFLAGS) -I $(headersDir) -o $(appName)$(binaryFormat) $(appName)$(codeFormat) $(iconDir)/$(appName)$(iconFormat) std_cdecl_lib$(dLibFormat)
 	./$(appName)
 
 .PHONY: cleanObjs cleanAllSLib cleanAllDLib clean sLib dLib app appN appR appNR all
