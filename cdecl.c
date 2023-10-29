@@ -65,7 +65,7 @@ BOOL APIENTRY DllMain(HINSTANCE instance, DWORD reason, LPVOID reserved) {
 #endif
 
 /**
- * TODO: Definición de {@code helloWorld}.
+ * TODO: Description of {@code helloWorld}.
  */
 LANGUAGE DLLIMPORT CALLING void helloWorld(int nro, int nargs, ...) {
     printf("%s from DLL!\n", __func__);
@@ -86,7 +86,7 @@ LANGUAGE DLLIMPORT CALLING void helloWorld(int nro, int nargs, ...) {
 }
 
 /**
- * TODO: Definición de {@code printNumber}.
+ * TODO: Description of {@code printNumber}.
  */
 CALLING void printNumber(int nro) {
     for (int i = 0; i < nro; i++)

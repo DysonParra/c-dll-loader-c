@@ -64,7 +64,7 @@ BOOL APIENTRY DllMain(HINSTANCE instance, DWORD reason, LPVOID reserved) {
 #endif
 
 /**
- * FIXME: Definición de {@code factorial}.
+ * FIXME: Description of {@code factorial}.
  * Obtiene el factorial de un número.
  */
 LANGUAGE DLLIMPORT CALLING int factorial(int nro) {
@@ -78,7 +78,7 @@ LANGUAGE DLLIMPORT CALLING int factorial(int nro) {
 }
 
 /**
- * FIXME: Definición de {@code printArray}.
+ * FIXME: Description of {@code printArray}.
  * Imprime un array en pantalla.
  */
 CALLING void printArray(char* array) {
